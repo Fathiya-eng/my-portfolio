@@ -1,20 +1,44 @@
-<nav class="navbar navbar-dark bg-dark">
-<span class="navbar-brand p-3">My Portfolio</span>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
 
+        <a class="navbar-brand" routerLink="/">My Portfolio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/profile" routerLinkActive="active">
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
 <div class="container my-5">
 
-<h1 class="my-5">Welcome to My Portfolio</h1>
-<h3>Hello {{studentName}}!</h3>
+    <h1 class="my-5">Welcome to My Portfolio</h1>
+    <h3>Hello {{studentName}}!</h3>
 
-<img [src]="profileImage" alt="">
-<br>
+    <img [src]="profileImage" alt="">
+    <br>
 
-<button class="btn btn-primary" (click)="isDisabled">Disabled</button>
+    <button class="btn btn-primary" (click)="isDisabled">Disabled</button>
 
-<button class="btn btn-primary d-block my-2" (click)="onButtonClick()">click me</button>
-<p class="text-danger">{{message}}</p>
+    <button class="btn btn-primary d-block my-2" (click)="onButtonClick()">click me</button>
+    <p class="text-danger">{{message}}</p>
 
 </div>
-
-
