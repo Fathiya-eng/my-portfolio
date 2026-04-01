@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
+  message:string = "Hello from Parent! ";
+
+  receivedData = '';
+onReceive(value: any) { 
+  this.receivedData = value; 
+}
+
+SendData(data:any){
+  this.message = data.target.value
+}
+
 }

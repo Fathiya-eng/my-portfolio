@@ -1,1 +1,8 @@
-<p>parent works!</p>
+<div class="container bg-danger rounded p-2">
+
+    <app-child [data]="message" (send)="onReceive($event)"></app-child>
+    <p>Received: {{receivedData}}</p>
+
+    <input type="text" class="form-control" placeholder="send data to child" (input)="SendData($event)">
+    
+</div>
